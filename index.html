@@ -33,16 +33,14 @@
       <div class="each-day">
         <p>第二周</p>
         <ul>
-          <li><a target="_blank" href="workflow-and-tools.html">高效前端开发</a></li>
-          <li>
-            <a target="_blank" href="css3.html">CSS3</a>
-          </li>
+          <li><a target="_blank" href="css3.html">HTML5 & CSS3</a></li>
+          <li><a target="_blank" href="rwd-bestpractise.html">响应式设计及最佳实践</a></li>
         </ul>
       </div>
       <div class="each-day">
         <p>第三周</p>
         <ul>
-          <li><a target="_blank" href="rwd-bestpractise.html">响应式设计及最佳实践</a></li>
+          <li><a target="_blank" href="workflow-and-tools.html">高效前端开发</a></li>
           <li><a target="_blank" href="">前端框架的相关实践</a></li>
         </ul>
       </div>
@@ -145,17 +143,17 @@
     <section>
       <section>
         <h3>HTML</h3>
-        <p>
+        <p class=" fragment roll-in">
           <span class="font-pink">HTML</span> stands for <span class="font-pink">H</span>yper<span class="font-pink">T</span>ext <span class="font-pink">M</span>arkup <span class="font-pink">L</span>anguage
         </p>
       </section>
       <section>
         <h3>What does HTML mean?</h3>
-        <div class="what-is-html">
-        <strong>Hypertext</strong>
-        <p>Overcoming the constraints of written text. Interactive.</p>
-        <strong>Markup Language</strong>
-        <p>A modern system for annotating a document in a way that is syntactically distinguishable from the text. </p>
+        <div class="what-is-html fragment roll-in">
+          <strong>Hypertext</strong>
+          <p>Overcoming the constraints of written text. Interactive.</p>
+          <strong>Markup Language</strong>
+          <p>A modern system for annotating a document in a way that is syntactically distinguishable from the text. </p>
         </div>
       </section>
       <section>
@@ -164,31 +162,32 @@
       </section>
 
       <section>
-        <div data-markdown>
+        <h3>A whole html structure</h3>
+        <div data-markdown class="text-code">
           <script type="text/template" >
-            ### A whole html structure
-            ```HTML
-              <!doctype html>
-              <html>
-                <head>
-                </head>
-                <body>
-                </body>
-              </html>
-            ```
-          </script>
+              ```HTML
+                <!doctype html>
+                <html>
+                  <head>
+                  </head>
+
+                  <body>
+                  </body>
+                </html>
+              ```
+            </script>
         </div>
       </section>
 
       <section>
-        <div data-markdown>
+        <div data-markdown class="text-code">
           <script type="text/template" >
             ### Head
             ```HTML
             <head>
               <meta charset="utf-8">
               <title>Hello World</title>
-              <meta name="description" content="Here is description for displaying on search engineer">
+              <meta name="description" content="Description for displaying on search engineer">
               <link rel="stylesheet" href="css/my.css"/>
             </head>
             ```
@@ -200,19 +199,18 @@
 
 
       <section>
-        <div data-markdown>
-          <script type="text/template" >
-            ### Style tag
-            ```HTML
+        <h3>Style tag</h3>
+        <pre class="text-code">
+          <code>
             <style>
-              background-color: yellow;
-              font-size: 16px;
-              color: red;
+              body {
+                background-color: yellow;
+                font-size: 16px;
+                color: red;
+              }
             </style>
-            ```
-          </script>
-
-        </div>
+          </code>
+        </pre>
       </section>
 
       <section>
@@ -230,26 +228,26 @@
       <section>
         <div data-markdown>
           <script type="text/template" >
-            ### BODY
-            ```HTML
-            <body>
-              <h1>This is a h1 element</h1>
-              <p>A long paragraph, A long paragraph, A long paragraph, A long paragraph, A long paragraph</p>
-              <ul>
-                <li>Apple</li>
-                <li>Pear</li>
-                <li>Banana</li>
-              </ul>
-              <a href="www.google.com">click here to google</a>
-              <form>
-                <h1>Please Login</h1>
-                <input type="text" placeholder="Email Address"/>
-                <input type="password" placeholder="Password"/>
-                <input type="submit" value="Login">
-              </form>
-            </body>
-            ```
-          </script>
+              ### BODY
+              ```HTML
+              <body>
+                <h1>This is a h1 element</h1>
+                <p>A long paragraph, A long paragraph, A long paragraph</p>
+                <ul>
+                  <li>Apple</li>
+                  <li>Pear</li>
+                  <li>Banana</li>
+                </ul>
+                <a href="www.google.com">click here to google</a>
+                <form>
+                  <h1>Please Login</h1>
+                  <input type="text" placeholder="Email Address"/>
+                  <input type="password" placeholder="Password"/>
+                  <input type="submit" value="Login">
+                </form>
+              </body>
+              ```
+            </script>
         </div>
         <a href="example/hello.html" target="_blank">Example</a>
       </section>
@@ -269,7 +267,7 @@
         <ul>
           <li>Block tags</li>
           <li>Inline tags</li>
-          <li>Inline-block tags</li>
+          <li>Inline Block tags</li>
         </ul>
       </section>
 
@@ -337,41 +335,45 @@
       </section>
 
 
-      <section>
-        <div>aside</div>
-        <img src="images/aside.png" alt="">
+      <!--<section>-->
+        <!--<div>aside</div>-->
+        <!--<img src="images/aside.png" alt="">-->
 
-      </section>
+      <!--</section>-->
 
-      <section>
-        <div>header, footer</div>
-        <div style="float:left;width: 48%">
-          <img src="images/header-example1.png" alt="">
-          github
-        </div>
-        <div style="float:left;width: 48%">
-          <img src="images/header-example2.png" alt="" >
-          bootstrap
-        </div>
-      </section>
+      <!--<section>-->
+        <!--<div>header, footer</div>-->
+        <!--<div style="float:left;width: 48%">-->
+          <!--<img src="images/header-example1.png" alt="">-->
+          <!--github-->
+        <!--</div>-->
+        <!--<div style="float:left;width: 48%">-->
+          <!--<img src="images/header-example2.png" alt="" >-->
+          <!--bootstrap-->
+        <!--</div>-->
+      <!--</section>-->
 
-      <section>
-        <div>nav</div>
-        <img src="images/nav-example.png" alt="">
-      </section>
+      <!--<section>-->
+        <!--<div>nav</div>-->
+        <!--<img src="images/nav-example.png" alt="">-->
+      <!--</section>-->
 
-      <section>
-        <div>article</div>
-        <img src="images/article-example.png" alt="">
-      </section>
+      <!--<section>-->
+        <!--<div>article</div>-->
+        <!--<img src="images/article-example.png" alt="">-->
+      <!--</section>-->
 
 
       <section>
         <h3>Inline tags</h3>
-        <div>span, strong, em, a, label</div>
-        <div>img, input, iframe, select</div>
-        <div>svg, canvas, audio, video
-        </div>
+        <p>span, strong, em, a, label</p>
+        <!--<div>svg, canvas, audio, video</div>-->
+      </section>
+
+
+      <section>
+        <div>span</div>
+        <p>Can be nested anywhere.</p>
       </section>
 
       <section>
@@ -391,6 +393,11 @@
       </section>
 
       <section>
+        <h3>Inline Block Tags</h3>
+        <p> img, input, select</p>
+      </section>
+
+      <section>
         <div>img</div>
 
         <div data-markdown>
@@ -405,8 +412,10 @@
       </section>
 
       <section>
-        <div>span</div>
-        <p>Can be nested anywhere.</p>
+        <div>input</div>
+        <p>[text, checkbox, radio, password, button]</p>
+        <img src="images/input-example.png" alt="box model" title="box model image">
+        <img src="images/input-example-style.png"  alt="box model" title="box model image" width="300">
       </section>
 
       <section>
@@ -431,7 +440,7 @@
         <ul>
           <li>h1, h2, h3, h4, h5, h6</li>
           <li>p, div, section</li>
-          <li>aside, header, footer, nav, article</li>
+          <!--<li>aside, header, footer, nav, article</li>-->
           <li>table, th, tr, td</li>
           <li>form, label, input</li>
           <li>ul, ol, li</li>

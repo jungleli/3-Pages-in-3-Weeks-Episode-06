@@ -116,4 +116,6 @@ section ul li {
 	text-align: left;
 	float:left;
 }
-
+.reveal pre {
+	box-shadow: none;
+}

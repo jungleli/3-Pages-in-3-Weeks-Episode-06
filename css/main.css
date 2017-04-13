@@ -119,3 +119,8 @@ section ul li {
 .reveal pre {
 	box-shadow: none;
 }
+
+.color-orange {
+    color: orange;
+}
+

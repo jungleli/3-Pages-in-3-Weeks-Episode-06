@@ -259,12 +259,6 @@
         <a href="example/hello.html" target="_blank">Example</a>
       </section>
 
-      <!--<section>-->
-        <!--<h3>Reset css</h3>-->
-        <!--<p>Reset css is used to override the default browser style.</p>-->
-      <!--</section>-->
-
-
     </section>
 
     <section>
@@ -469,7 +463,7 @@
       <ul>
         <li>What's CSS</li>
         <li>How CSS works</li>
-        <li>How to link css</li>
+        <li>How to link CSS</li>
         <li>Box model</li>
         <li>Layout properties</li>
       </ul>
@@ -478,7 +472,7 @@
     <section>
       <section>
         <h2>CSS</h2>
-        <p style="font-variant: small-caps;">Cascading Style Sheet</p>
+        <p style="font-variant: small-caps;"><span class="font-pink">C</span>ascading <span class="font-pink">S</span>tyle <span class="font-pink">S</span>heet</p>
       </section>
 
       <section>
@@ -492,55 +486,58 @@
       </section>
 
       <section>
-        <h3>CSS怎么写？</h3>
+        <h3>How to write CSS?</h3>
       </section>
 
       <section>
-        <div class="text-code-super">
-              color: <span>orange;</span>
+        <pre class="text-code">
+          <code>
+            selector {
+              property: value;
+              property: value;
+              ...
+            }
+          </code>
+        </pre>
+
+        <div class="text-code-super fragment roll-in">
+          h1 {
+            color: <span>orange;</span>
+          }
         </div>
       </section>
 
       <section>
-        html
+        Example
         <div data-markdown class="text-code">
         <script type="text/template">
           ```HTML
-          <div>Hello kitty</div>
+          <h3>Hello kitty!</h3>
           ```
         </script>
         </div>
-        <br>
-        css
-        <div data-markdown class="text-code">
-        <script type="text/template">
-          ```CSS
-          color: yellow;
-          width: 300px;
-          background-color: green;
-          text-align: center;
-          ```
-        </script>
-       </div>
-      </section>
 
-      <section>
-        HTML
-        <div data-markdown class="text-code">
-        <script type="text/template">
-          ```HTML
-          <div style="color: yellow; width: 300px; background-color: green; text-align: center;">Hello kitty</div>
-          ```
-        </script>
-        </div>
-        <br>
-        <div class="fragment" style="margin: 0 auto; color:yellow; width: 300px; background-color:green; text-align: center; ">
-          hello, kitty
+        <h3>Hello kitty!</h3>
+
+        <h3 class="fragment roll-in" style="color: purple; background-color: lightblue;">
+          hello, kitty!
+        </h3>
+        <div class="fragment roll-in">
+          <div data-markdown class="text-code">
+          <script type="text/template">
+            ```CSS
+            h3 {
+              color: purple;
+              background-color: lightblue;
+            }
+            ```
+          </script>
+         </div>
         </div>
       </section>
 
       <section>
-        <h3>CSS 属性</h3>
+        <h3>CSS Attribute</h3>
         <div class="text-code-middle">
               <em class="fragment">width</em><br>
               <em class="fragment">height</em><br>
@@ -554,7 +551,7 @@
       </section>
 
       <section>
-        <h3>CSS 属性及值</h3>
+        <h3>CSS Attribute & Value</h3>
         <div class="text-code-middle">
               <em>width: </em><span class="fragment">300px;</span><br>
               <em>height: </em><span class="fragment">100px;</span><br>
@@ -570,121 +567,32 @@
     </section>
 
     <section>
-      <h2>CSS小游戏</h2>
-      <div style="background: #bbb; text-align: left; border: 5px solid; color: #666; width: 300px; margin-left: 200px; margin-right: auto; padding-top: auto; padding-bottom: 10px; height: 100px;" >猜猜我的样式。
+      <h2>Guess my styles</h2>
+      <div style="background: lightgray; text-align: center; border: 5px solid red; color: #666; width: 400px; margin: 0 auto; padding-top: auto; padding-bottom: 10px; height: 100px;" >猜猜我的样式。
       </div>
     </section>
 
     <section>
-
       <section>
-        <h2>选择器</h2>
-        <ul>
-          <li>元素</li>
-          <li>类和ID</li>
-          <li>属性</li>
-          <li>后代</li>
-          <li>关系</li>
-          <li>伪类和伪元素</li>
-          <li>通配</li>
-        </ul>
+        <h2>How to link CSS？</h2>
+         <img width="800" src="images/css-link.png" />
       </section>
 
       <section>
+        <h3>1. Adding Inline CSS to HTML tags</h3>
         <div data-markdown class="text-code">
         <script type="text/template">
-          ### Tag
-          ```HTML
-          <p>Hello cat</p>
-          ```
-          ```CSS
-          p {
-            font-size: 40px;
-            color: pink;
-          }
-          ```
-        </script>
-        </div>
-        <br>
-        <a class="fragment" style="font-size: 40px; color: #f04e98; text-shadow: none;">Hello cat</a>
-      </section>
-
-      <section>
-        <div data-markdown class="text-code">
-          <script type="text/template">
-            ### id
-            ```HTML
-            <p id="kitty">Hello kitty</p>
-            ```
-            ```CSS
-            #kitty {
-              font-size: 40px;
-              color: pink;
-            }
-            ```
-          </script>
-        </div>
-        <br>
-        <p class="fragment" style="font-size: 40px; color: #f04e98; text-shadow: none;">Hello kitty</p>
-      </section>
-
-      <section>
-        <div data-markdown class="text-code">
-          <script type="text/template">
-            ### class
-            ```HTML
-            <div class="cat">Hello Kitty</div>
-            <div class="cat">Hello Tom</div>
-            ```
-            ```CSS
-            .cat {
-              color: blue;
-            }
-            ```
-          </script>
-        </div>
-        <br>
-        <div class="fragment" style="color: blue">Hello cat</div>
-      </section>
-
-      <section>
-        <h3>多个CLASS</h3>
-        <div data-markdown class="text-code">
-        <script type="text/template">
-          ```HTML
-          <div id="kitty" class="cat animal" >I am Kitty.</div>
-
-          <div id="tom" class="cat animal" >I am Tom.</div>
-          ```
-        </script>
-        </div>
-      </section>
-
-
-
-    </section>
-
-    <section>
-      <section>
-        <h2>CSS放在哪里？</h2>
-        <!-- <img width="600" src="images/thinking.png" /> -->
-      </section>
-
-      <section>
-        <div data-markdown class="text-code">
-        <script type="text/template">
-          ### 1. 直接写在标签中
           ``` HTML
-          <span style="color: red;">Jerry</span>
+          <span style="color: red; background: lightblue;">Jerry</span>
           ```
         </script>
         </div>
       </section>
 
       <section>
-        <div  data-markdown class="text-code">
+        <h3>2. Embedding CSS into the HTML</h3>
+        <div data-markdown class="text-code">
         <script type="text/template">
-          ### 2. 写在文档中
           ```HTML
           <head>
             <style>
@@ -702,9 +610,9 @@
         </div>
       </section>
       <section>
+        <h3>3. Linking to a separate CSS file</h3>
         <div data-markdown class="text-code">
         <script type="text/template">
-          ### 3. 链接外部CSS文件
           ```HTML
           <head>
             <link rel="stylesheet" href="stylesheet/main.css">
@@ -712,21 +620,34 @@
           ```
         </script>
         </div>
-        <br>
-        main.css
-        <div data-markdown class="text-code">
-        <script type="text/template">
-          ```CSS
-          .cat {
+        <div class="fragment roll-in">
+          main.css
+          <div data-markdown class="text-code">
+            <script type="text/template">
+              ```CSS
+              .cat {
               font-size: 30px;
               margin: 60px auto 10px;
-          }
+              }
+              ```
+            </script>
+          </div>
+        </div>
+
+      </section>
+      <section>
+        <h3>4. Importing a CSS file from within CSS</h3>
+        <div data-markdown class="text-code">
+        <script type="text/template">
+          ```HTML
+          @import "newstyles.css";
+
           ```
         </script>
         </div>
       </section>
 
-      <!-- <section>
+      <!--<section>
         <h3>3种方式哪家强？请抢答。</h3>
         <img width="500" src="images/wangxiaoya.jpg" />
       </section>
@@ -761,144 +682,184 @@
           a.a-link:hover {color:#FF00FF!important;}  /* mouse over link */
           a.a-link:active {color:#0000FF!important;}  /* selected link */
        </style>
-      </section> -->
+      </section>-->
 
     </section>
 
-    <!--<section>-->
-        <!--<h3>"我认为CSS是最复杂的语言。"</h3>-->
-        <!--<p style="text-align: right" >&#45;&#45; 毛PM</p>-->
-    <!--</section>-->
+    <section>
+        <h3>"我认为CSS是最复杂的语言。"</h3>
+        <p style="text-align: right" >-- 毛PM</p>
+    </section>
 
     <section>
       <section>
-        <h2>选择器 特殊性</h2>
-        <p>Specificity</p>
+        <h3>Selector & Specificity</h3>
       </section>
 
+        <section>
+          <h3>Basic Selectors</h3>
+          <ul>
+            <li>Tag selectors &rarr; <em class="color-orange">tagName</em></li>
+            <li>ID selectors &rarr; <em class="color-orange">#idName</em></li>
+            <li>Class selectors &rarr; <em class="color-orange">.className</em></li>
+            <li>Attribute &rarr; <em class="color-orange">[attr=value], [type='text']</em></li>
+            <li>Universal selectors &rarr; <em class="color-orange">*</em></li>
+          </ul>
+        </section>
+
       <section>
-         <h3>猜颜色</h3>
+        <h3>Combinators</h3>
+        <ul>
+          <li>Descendant selectors &rarr; <em class="color-orange">div &nbsp; p</em></li>
+          <li>Child selectors &rarr; <em class="color-orange">div > p</em></li>
+          <li>Adjacent sibling selectors &rarr; <em class="color-orange">div + p</em></li>
+          <li>General sibling selectors &rarr; <em class="color-orange">div ~ span</em></li>
+        </ul>
+      </section>
+
+        <section>
+          <div data-markdown class="text-code">
+            <script type="text/template">
+              ### Tag
+              ```HTML
+              <p>Hello kitty</p>
+              <div>Hello Tom</div>
+              ```
+              ```CSS
+              p {
+                font-size: 40px;
+                color: pink;
+              }
+              ```
+            </script>
+          </div>
+          <div  class="fragment">
+            <a style="font-size: 40px; color: #f04e98; text-shadow: none;">Hello kitty</a>
+            <div>Hello Tom</div>
+          </div>
+        </section>
+
+        <section>
+          <div data-markdown class="text-code">
+            <script type="text/template">
+              ### id
+              ```HTML
+              <p id="kitty">Hello kitty</p>
+              ```
+              ```CSS
+              #kitty {
+                font-size: 40px;
+                color: pink;
+              }
+              ```
+            </script>
+          </div>
+          <br>
+          <p class="fragment" style="font-size: 40px; color: #f04e98; text-shadow: none;">Hello kitty</p>
+        </section>
+
+        <section>
+          <div data-markdown class="text-code">
+            <script type="text/template">
+              ### class
+              ```HTML
+              <div class="cat">Hello Kitty</div>
+              <p class="cat">Hello Tom</p>
+              ```
+              ```CSS
+              .cat {
+                color: blue;
+              }
+              ```
+            </script>
+          </div>
+          <br>
+          <div class="fragment" style="color: blue">
+            <p>Hello Kitty</p>
+            <p>Hello Tom</p>
+          </div>
+        </section>
+
+        <section>
+          <h3>多个CLASS</h3>
+          <div data-markdown class="text-code">
+            <script type="text/template">
+              ```HTML
+              <div id="kitty" class="cat animal" >I am Kitty.</div>
+
+              <div id="tom" class="cat animal" >I am Tom.</div>
+              ```
+            </script>
+          </div>
+        </section>
+
+      <section>
+         <h3>What is cat's color?</h3>
          <div data-markdown class="text-code">
           <script type="text/template">
             ```html
-            <p class="interest hobby">I love dance</p>
+            <p class="cat animal">I have a cat!</p>
             ```
             ``` CSS
             p { color: red; }
-            .hobby { color: yellow; }
-            .interest { color: blue; }
+            .animal { color: yellow; }
+            .cat { color: blue; }
             ```
           </script>
 
         </div>
         <br>
-        <p class="fragment" data-fragment-index="0" style="color:blue">Blue</p>
+        <p class="fragment" data-fragment-index="0" style="color:blue"><strong>Blue</strong> cat</p>
       </section>
 
-      <!-- <section>
-        <h3>猜颜色</h3>
+      <section>
+        <h3>What is puppy's color?</h3>
         <div data-markdown class="text-code">
           <script type="text/template">
             ```html
-            <div id="spare_time">
-                <p class="hobby interest" id="dance">
-                  I love dance
+            <div id="pet_tom">
+                <p id="tom" class="puppy animal" >
+                  I have a puppy!
                 </p>
             </div>
             ```
             ``` CSS
-            #spare_time p { color: purple; }
-            #dance { color: black; }
-            p { color: red; }
-            .hobby { color: yellow; }
-            .interest { color: blue; }
+            #pet_tom .puppy { color: red; }
+            #tom { color: black; }
+            p.puppy.animal { color: yellow; }
+            p[id='tom'] { color: blue; }
             ```
           </script>
         </div>
-          <p class="fragment" data-fragment-index="0" style="color:purple">Purple</p>
-      </section>  -->
-
-      <section>
-        <h3>猜颜色</h3>
-        <div data-markdown class="text-code">
-          <script type="text/template">
-            ```html
-            <div id="spare_time">
-                <p id="dance" class="hobby interest" >
-                  I love dance
-                </p>
-            </div>
-            ```
-            ``` CSS
-            #spare_time .hobby { color: red; }
-            #dance { color: black; }
-            p.hobby.interest { color: yellow; }
-            p[id='dance'] { color: blue; }
-            ```
-          </script>
-
+        <div style="display: flex; justify-content: center;">
+          <img src="images/puppy.jpeg" width="200px" style="margin: 0 10px 0;" alt="">
+          <p class="fragment" data-fragment-index="0" style="color:red"><strong>Red</strong> puppy</p>
         </div>
-        <p class="fragment" data-fragment-index="0" style="color:orange">Red</p>
       </section>
 
       <section>
-        <h3>选择器的优先级到底是怎么判断的？</h3>
-        <img width="600" src="images/thinking.png" />
+        <h3>how to calculate css specificity？</h3>
+        <img width="300" src="images/thinking-face.jpeg" />
       </section>
 
-      <!-- <section>
-        <h3>Guess color</h3>
-        <div data-markdown>
-          <script type="text/template">
-            ``` CSS
-            #spare_time div p { color: purple; }
-            #dance { color: black; }
+      <section>
+        <h3>specificity</h3>
+        <p>INLINE STYLE <span class="highlight-blue">&gt;</span> #ID<span class="highlight-blue">&gt;</span> .CLASS<span class="highlight-blue">&gt;</span> ELEMENT</p>
+      </section>
+
+      <section>
+        <h3>!important</h3>
+        <pre class="text-code">
+          <code>
+            <p style="color: blue;">Hello kitty!</p>
+
             p { color: red !important; }
-            .hobby { color: yellow; }
-            .interest { color: blue; }
-            ```
-            ```html
-            <div id="spare_time">
-              <div>
-                <p class="hobby interest" id="dance" style="color: pink;">I love dance</p>
-              </div>
-            </div>
-            ```
-          </script>
-        </div>
-
-          <p class="fragment" data-fragment-index="0" style="color: red;">Red</p>
-      </section>   -->
-
-      <section>
-        <h3>0 0 0 0</h3>
+          </code>
+        </pre>
       </section>
-
-      <section>
-        <h3>层叠</h3>
-        <ul>
-          <li>1. 找到所有规则及相匹配的选择器。</li>
-          <li>2. 按来源进行权重排序。</li>
-          <li>3. 按important分组。</li>
-          <li>4. 计算特殊性。</li>
-          <li>5. 按出现顺序。</li>
-        </ul>
-      </section>
-
-      <section>
-        <div data-markdown class="text-code">
-          <script type="text/template">
-            ``` CSS
-            body table tr[id="totals"] td ul > li { color: red; }
-            ul.list li#answer { color: black; }
-            ```
-          </script>
-        </div>
-      </section>
-
     </section>
 
-    <section>
+   <!-- <section>
       <section>
         <h2>字体</h2>
       </section>
@@ -917,16 +878,26 @@
     <section>
       <h3>基本视觉格式化</h3>
     </section>
-
+-->
     <section>
       <section>
-        <h3>框模型</h3>
-        <h3>定位</h3>
-        <h3>浮动</h3>
+        <h3>box model</h3>
       </section>
 
       <section>
-        <h3>框模型</h3>
+        <h3>Box-model(W3C)</h3>
+        <div>
+          <img src="images/h1.jpg" alt="">
+        </div>
+        <div class="fragment roll-in">actual rendered width = width + padding + border</div>
+      </section>
+
+      <section>
+        <h3>Box-model(IE)</h3>
+        <div>
+          <img src="images/h2.jpg" alt="">
+        </div>
+        <pre class="fragment roll-in"><code>box-sizing: border-box;</code></pre>
       </section>
 
       <section>
@@ -945,104 +916,474 @@
       </section>
 
       <section>
-        <h3>元素类型</h3>
+        <h3>block, inline, inline-block</h3>
       </section>
-
       <section>
-        <h3 style="font-size: 40px;">block，inline-block，inline元素？</h3>
-        <img width="500" src="images/chensizhe.jpg" alt="">
-      </section>
-
-      <section>
-        <h3>Block元素</h3>
-        <p>div,h1,p,ul,ol,form</p>
-      </section>
-
-      <section>
-        <h3>Inline元素</h3>
-        <p>span,a,label</p>
-      </section>
-
-      <section>
-        <h3 style="font-size: 40px;">Inline-block元素</h3>
-        <p>img,input,button</p>
-      </section>
-
-      <section>
-        <h3>替换元素</h3>
-        <p>img, input</p>
-      </section>
-
-      <section>
-        <h3>非替换元素</h3>
-        <p>span,a,label</p>
-      </section>
-
-      <section>
-        <img src="images/display.png" alt="">
-      </section>
-
-      <!-- <section>
-        <h3>元素display的形式</h3>
-        <ul class="fragment">
-          <li>Block: take whole width of its parent width</li>
-          <li>Inline: will only take the spaces it needed</li>
-          <li>Inline-block: take spaces it needed and then you can give it more width</li>
-          <li>None: hidden from page</li>
+        <h3>Block</h3>
+        <p>Block have Dimensions</p>
+        <ul>
+          <li>width,max-width,min-width</li>
+          <li>height,max-height,min-height</li>
+          <li>margin</li>
+          <li>padding</li>
         </ul>
-        <br>
-        <br>
-        <a class="fragment" href="example/hello.html" target="_blank">Example</a>
-      </section> -->
-    </section>
-
-
-
-    <section>
+      </section>
       <section>
-        <h2>定位</h2>
+        <h3>Inline</h3>
+        <ul>
+          <li>margin-left, margin-right</li>
+          <li>padding</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Inline-Block</h3>
       </section>
 
       <section>
-        <h3>Relative</h3>
-        <h3>Absolute</h3>
-        <h3>Fixed</h3>
-      </section>
-    </section>
-
-    <section>
-      <section>
-        <h2>浮动</h2>
-      </section>
-
-      <section>
-        <h3>如何浮动</h3>
-        <p>float: left;</p>
-        <p>float: right;</p>
+        <h3>DISPLAY</h3>
+        <p class="highlight-blue">display: block
+          <span class="t-gray">|</span> inline
+          <span class="t-gray">|</span> inline-block
+          <span class="t-gray">|</span> table
+          <span class="t-gray">|</span> none
+        </p>
+        <div class="fragment roll-in">
+          <img src="images/display.png" alt="">
+        </div>
       </section>
 
-      <section>
-        <h3>浮动的问题</h3>
-        <p>如何解决</p>
-      </section>
     </section>
 
     <section>
+
       <section>
-        <h2>CSS如何组织</h2>
+        <h2>BASIC</h2>
+
+      </section>
+      <section>
+        <h3>padding</h3>
+        <ul>
+          <li>padding-top</li>
+          <li>padding-right</li>
+          <li>padding-bottom</li>
+          <li>padding-left</li>
+        </ul>
+        <p class="fragment roll-in t-gray">padding: top right bottom left;<br>padding: 10px 20px 10px 20px;</p>
+        <p class="fragment roll-in t-gray">padding: 10px 20px;</p>
+      </section>
+      <section>
+        <h3>margin</h3>
+        <ul>
+          <li>margin-top</li>
+          <li>margin-right</li>
+          <li>margin-bottom</li>
+          <li>margin-left</li>
+        </ul>
+        <p class="fragment roll-in t-gray">margin: 0 auto;</p>
+      </section>
+      <section data-transition="slide" data-background="#4d7e65" style="color: whitesmoke;"
+               data-background-transition="zoom">
+        <h3 style="color: whitesmoke;">background</h3>
+        <ul>
+          <li>background-color</li>
+          <li>background-image</li>
+          <li>background-position</li>
+          <li>background-repeat</li>
+        </ul>
+        <p class="fragment roll-in t-gray">background: color image repeat position</p>
+      </section>
+      <section>
+        <h3>border</h3>
+        <ul>
+          <li>border-width</li>
+          <li>border-style</li>
+          <li>border-color</li>
+        </ul>
+        <p class="fragment roll-in t-gray">border: width style color</p>
+        <style>
+          .bor1 {
+            width: 0;
+            height: 0;
+            margin: 40px auto !important;
+            border-width: 50px !important;
+            border-style: solid !important;
+            border-color: #36e #f60 #c00 #0f0 !important;
+          }
+          .bor0{
+            margin:30px !important;
+            height:80px;
+            width:80px;
+            border-top:solid 50px red !important;
+            border-left:solid 50px green !important;
+            border-right:solid 50px orange !important;
+            border-bottom:solid 50px blue !important;
+          }
+        </style>
+        <div style="margin: 30px auto; display: flex;">
+          <div class="bor0 fragment roll-in"></div>
+          <div class="bor1 fragment roll-in"></div>
+        </div>
+      </section>
+      <section>
+        <h3>outline</h3>
+        <ul>
+          <li>outline-width</li>
+          <li>outline-style</li>
+          <li>outline-color</li>
+        </ul>
+        <p class="fragment roll-in t-gray">outline: 5px solid #69f</p>
+        <style>
+          .out2 {
+            width: 300px;
+            height: 40px;
+            margin: 40px auto !important;
+            border-width: 1px !important;
+            border-style: solid !important;
+            border-color: #f00 !important;
+          }
+
+          .out1 {
+            outline: 5px solid #69f !important;
+          }
+        </style>
+        <input class="fragment roll-in out2 out1">
       </section>
 
+      <section>
+        <h3>Length</h3>
+        <p>px, em, pt, %</p>
+      </section>
+
+      <section>
+        <h3>color</h3>
+        <ul>
+          <li>English Name</li>
+          <li>#000000 - #ffffff</li>
+          <li>RGB(0, 128, 255)</li>
+        </ul>
+
+        <p class="fragment">#222222  &rarr; #222, #332211 &rarr; 321</p>
+      </section>
+
+      <section>
+        <h3>font</h3>
+        <ul>
+          <li>font-family</li>
+          <li>font-size</li>
+          <li>font-style</li>
+          <li>font-weight</li>
+          <li>line-height</li>
+          <li>letter-spacing</li>
+        </ul>
+        <p class="fragment roll-in t-gray">font: style weight size/line-height family</p>
+      </section>
+
+      <section>
+        <h3>other text</h3>
+        <ul>
+          <li>text-align</li>
+          <li>text-decoration</li>
+          <li>text-indent</li>
+          <li>text-overflow</li>
+          <li>white-space</li>
+          <li>word-break</li>
+          <li>vertical-align</li>
+        </ul>
+      </section>
+
+    </section>
+
+    <section>
+      <section>
+        <h3>list</h3>
+        <ul>
+          <li>list-style</li>
+        </ul>
+      </section>
+      <section>
+        <h3>table</h3>
+        <ul>
+          <li>border-collapse</li>
+          <li>border-spacing</li>
+        </ul>
+      </section>
+    </section>
+
+
+    <section>
+
+      <section>
+        <h3>float & position</h3>
+      </section>
+      <section>
+        <h3>float</h3>
+        <p>float: left | right | none</p>
+        <div style="margin:0 -100px">
+          <span class="fragment roll-in t-gray">
+              <img src="images/f1.png" alt="">
+          </span>
+          <small class="fragment roll-in t-gray" style="margin:0 10px;margin-top:100px;">
+            .div2 {float:left;}
+          </small>
+          <span class="fragment roll-in t-gray">
+              <img src="images/f2.png" alt="" style="vertical-align:top">
+          </span>
+        </div>
+      </section>
+      <section>
+        <h3>clear</h3>
+        <p>clear: none | left | right | both</p>
+      </section>
+
+      <section>
+        <h2>POSITION</h2>
+        <p>postion: static | relative | absolute | fixed;</p>
+      </section>
+      <style>
+        .c-p {
+          width: 162px;
+          height: 162px;
+          margin: 40px auto 0 !important;
+          position: relative;
+        }
+
+        .c-p-1 {
+          width: 160px;
+          height: 160px;
+          border: 1px solid #ccc !important;
+          position: absolute;
+          left: 20px;
+          top: -20px;
+          background: orange;
+          line-height: 160px !important;
+          font-size: 14px !important;
+        }
+
+        .c-p-2 {
+          width: 160px;
+          height: 160px;
+          background: red;
+          border: 1px dotted #666 !important;
+          position: relative;
+        }
+      </style>
+      <section>
+        <h3 class="vs">RELATIVE</h3>
+        <p>position:<span class="t-blue"> relative</span></p>
+        <p class="fragment roll-in t-gray">relative to itself, no effect on it's positioning</p>
+        <pre class="fragment roll-in">
+          <code>
+            .c-p-1 {
+                background: orange;
+                width:100px;
+                height:100px;
+                border:1px dotted #ccc;
+                position:relative;
+                left:20px;
+                top:-20px;
+            }
+          </code>
+        </pre>
+        <div class="fragment roll-in c-p">
+          <div class="c-p-2"></div>
+          <div class="fragment roll-in c-p-1">relative</div>
+        </div>
+      </section>
+      <style>
+        .c-pa {
+          width: 300px;
+          height: 200px;
+          margin: 40px auto 0 !important;
+          position: relative;
+          background-color: #333 !important;
+        }
+
+        .c-p-3 {
+          width: 160px;
+          height: 160px;
+          border: 1px solid #ccc !important;
+          position: absolute;
+          bottom: 0;
+          right: 20px;
+          line-height: 160px !important;
+          font-size: 14px !important;
+        }
+      </style>
+      <section>
+        <h3 class="vs">ABSOLUTE</h3>
+        <p>position:<span class="t-blue">absolute</span></p>
+        <p class="fragment roll-in t-gray">positioned relative to the next parent element with relative (or absolute) positioning</p>
+        <pre class="fragment roll-in"><code>.c-p-3 {
+	width:100px;
+	height:100px;
+	border:1px dotted #ccc;
+	position:absolute;
+	right:20px;
+	bottom:0;
+}</code></pre>
+        <div class="fragment roll-in c-pa">
+          <div class="c-p-4"></div>
+          <div class="fragment roll-in c-p-3">absolute</div>
+        </div>
+      </section>
+      <section>
+        <h3 class="vs">FIXED</h3>
+        <p>position:<span class="t-blue">fixed</span></p>
+        <p class="fragment roll-in t-gray">positioned relative the browser window</p>
+      </section>
+      <section>
+        <h3>top, right, bottom, left</h3>
+      </section>
+      <style>
+        .c-pz {
+          width: 300px;
+          height: 200px;
+          margin: 40px auto 0 !important;
+          position: relative;
+          background-color: #333 !important;
+        }
+
+        .c-z {
+          width: 160px;
+          height: 160px;
+          position: absolute;
+          font-size: 14px !important;
+          line-height: 160px !important;
+        }
+
+        .c-z-1 {
+          background-color: #369;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+
+        .c-z-2 {
+          background-color: #c00;
+          right: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+      </style>
+      <section>
+        <h3>Z-INDEX</h3>
+        <pre class="fragment roll-in"><code>.c-z {
+	width:100px;
+	height:100px;
+	border:1px dotted #ccc;
+	position:absolute;
+}
+.c-z-1 {background-color:#369;top:0;left:0;z-index:2;}
+.c-z-2 {background-color:#c00;right:0;bottom:0;z-index:1;}
+</code></pre>
+        <div class="fragment roll-in c-pz">
+          <div class="c-z c-z-1">z-index:2</div>
+          <div class="c-z c-z-2">z-index:1</div>
+        </div>
+      </section>
+
+    </section>
+
+    <section>
+      <section>
+        <h3>PSEUDO CLASSES </h3>
+        <h3> PSEUDO ELEMENTS </h3>
+      </section>
+      <section>
+        <h3>PSEUDO CLASSES</h3>
+      </section>
+      <section>
+        <h3>a</h3>
+        <ol>
+          <li>:link</li>
+          <li>:visited</li>
+          <li>:hover</li>
+          <li>:active</li>
+        </ol>
+      </section>
+      <section>
+        <h3>other</h3>
+        <ul>
+          <li>:first-child</li>
+          <li>:last-child</li>
+          <li>:nth-child(n)</li>
+          <li>:not(selector)</li>
+          <li>:first-of-type</li>
+          <li>:last-of-type</li>
+          <li>:only-of-type</li>
+        </ul>
+      </section>
+        <section>
+          <h3>PSEUDO ELEMENTS</h3>
+          <ul>
+            <li>::before</li>
+            <li>::after</li>
+            <li>::first-letter</li>
+            <li>::first-line</li>
+          </ul>
+        </section>
+        <section>
+          <h3>content</h3>
+          <p class="highlight-blue">Content property is used in conjunction with the pseudo elements ::before and ::after.</p>
+        </section>
+        <style>
+          .cp1::before {
+            content:"“";
+          }
+          .cp1::after {
+            content: "”"
+          }
+        </style>
+        <section>
+          <h3>USE</h3>
+          <pre>
+            <code>
+              .cp1::before {
+                    content:"“";
+              }
+              .cp1::after {
+                    content: "”"
+              }
+            </code>
+          </pre>
+
+          <div class="fragment roll-in cp1">content</div>
+          <img src="images/pseudo.gif" alt="">
+
+        </section>
+      </section>
+
+    <section>
+
+      <section>
+        <h3>How to Organize your CSS</h3>
+      </section>
       <section>
         <h3>Reset css</h3>
         <p>Reset css is used to override the default browser style.</p>
       </section>
-
-
       <section>
         <h3>BEM</h3>
+        <p>Block Element Modifier</p>
       </section>
+
+    </section>
     </section>
 
+    <section>
+      <section style="text-align: left;">
+
+        <h1>Q & A</h1>
+        <p>
+          - <a href="http://www.htmldog.com/guides/html/">HTML Tutorial</a> <br>
+          - <a href="http://www.htmldog.com/guides/css/">CSS Tutorial</a> <br>
+          - <a href="http://www.w3.org/TR/css/">http://www.w3.org/TR/css</a> <br>
+          - <a href="https://developer.mozilla.org/en/docs/Web/CSS/Specificity">Specificity</a> <br>
+          - <a href="http://www.caniuse.com">Can I Use</a>
+        </p>
+      </section>
+
+    </section>
     <section>
       <h2>Try It Yourself</h2>
     </section>
